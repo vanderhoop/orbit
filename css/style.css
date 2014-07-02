@@ -1,5 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+
 body {
-  background: #222;
-  font-family: sans-serif;
-  font-style: italic;
+  background: #000 url("../images/starfield.png");
+  background-size: cover;
+  color: #fff;
+  font: 18px/1.4 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Fjalla One';
+}
+
+#graph {
+  margin: 0 auto;
+  width: 650px;
 }
