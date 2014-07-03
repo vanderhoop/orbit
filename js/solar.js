@@ -10,6 +10,7 @@ var moonR = earthR * 0.27;
 var earthOrbitR = (cx * 0.75) - earthR;
 //var moonOrbitR = earthR + (earthR * 30);
 var moonOrbitR = earthR + (earthR * 2);
+var epoch = new Date(2014, 6, 26).getTime();
 
 var earthDaysScale = d3.scale.linear()
   .range([0, 2 * Math.PI])
@@ -78,6 +79,8 @@ var moon = svg
   .attr('fill', '#999');
 
 var day = 0;
+var dayLength = 1000 * 60 * 60 * 24;
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 function update(d) {
   d = d || day;
@@ -94,6 +97,12 @@ function update(d) {
   moon
     .attr('cx', moonX)
     .attr('cy', moonY);
+
+  var date = new Date(epoch + (d * dayLength));
+  var dateStr = months[date.getMonth()] +' ';
+  dateStr += date.getDate() + ', ';
+  dateStr += date.getFullYear();
+  document.getElementById('date').innerText = dateStr;
 }
 
 //setInterval(update, 200);

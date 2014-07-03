@@ -4,15 +4,25 @@ body {
   background: #000 url("../images/starfield.png");
   background-size: cover;
   color: #fff;
-  font: 18px/1.4 'Helvetica Neue', Helvetica, sans-serif;
+  font: 18px/1.4 'Fjalla One', Helvetica, sans-serif;
   margin: 0;
 }
 
 h1 {
-  font-family: 'Fjalla One';
+  display: inline-block;
+}
+
+h1, #date {
+  margin: 0;
+  line-height: 30px;
+}
+
+#date {
+  float: right;
 }
 
 #graph {
   margin: 0 auto;
+  padding-top: 30px;
   width: 650px;
 }
